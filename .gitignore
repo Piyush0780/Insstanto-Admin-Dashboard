@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# Add the path to .gitignore
+echo "scripts/serviceAccountKey.json" >> .gitignore
+
+# Remove from the index (keep your local copy if you still need it)
+git rm --cached scripts/serviceAccountKey.json
+git commit -m "Stop tracking serviceAccountKey.json and add to .gitignore"
+
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.tsnode_modules/
+.env
+.env.*
+dist/
+build/
+.vscode/
+scripts/serviceAccountKey.json
